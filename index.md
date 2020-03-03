@@ -13,7 +13,7 @@
 
 ##### Android系统源码
 * ams
-* pms
+* [pms](/source/pms.md)
 
 ##### Android UI
 * 事件传递
