@@ -36,9 +36,10 @@ RealCall的enqueue()方法中，首先会检查是否被executed，如果没有�
 
 ####  拦截器
 * 责任链模式
-* 自定义拦截器
+* 自定义拦截器interceptors
 * retryAndFollowUpInterceptor 重试及重定向拦截器：负责请求的重试和重定向。
 * BridgeInterceptor 桥接拦截器：给请求添加对应的 header 信息，处理响应结果的 header 信息。
 * CacheInterceptor 缓存拦截器：根据当前获取的状态选择 网络请求 、读取缓存、更新缓存。
 * ConnectInterceptor 连接拦截器：建立 http 连接。
+* interceptors.addAll(networkIntclient.networkInterceptors())  //自定义的拦截器 --- !forWebSocket
 * CallServerInterceptor 读写拦截器：读写网络数据。

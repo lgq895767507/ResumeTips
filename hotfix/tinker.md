@@ -6,3 +6,8 @@
   2. 用自己创建的类加载器加载x.dex修复包(得到对应的dexElements[])
   3. 将得到的dexElements[]与系统的dexElements[]合并，并且将自己的放在最前面
   4. 通过反射技术，将合并后的新数组，赋值给pathList 
+
+
+#### andfix
+* class文件打包成dex文件命令操作：
+  * dx --dex --output out.dex .  //将当前目录下所有的class文件打包成dex文件 

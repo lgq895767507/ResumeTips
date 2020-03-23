@@ -21,7 +21,6 @@
 ##### Android系统源码
 * [ams](/source/ams.md)
 * [pms](/source/pms.md)
-* [Android View的绘制流程与原理](https://lgq895767507.github.io/2019/08/05/View%E7%9A%84%E5%8A%A0%E8%BD%BD%E4%B8%8E%E7%BB%98%E5%88%B6%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/)
 * [Handler](https://www.jianshu.com/p/f70ee1765a61)
 * [Binder](/source/binder.md)
 
@@ -47,7 +46,7 @@
 * Android插件化框架设计
 * 类加载机制
 * 动态代理
-* 热更新
+* [热更新](hotfix/tinker.md)
   
 ##### [性能优化](optimization/app_optimization.md)
 * 启动优化

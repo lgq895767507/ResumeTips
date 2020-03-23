@@ -2,7 +2,7 @@
 
 * 生命周期：加载，验证，准备，解析，初始化，使用，卸载。
 *  验证，准备，解析三个部分统称为连接
-* 双亲委派模型。Bootstrap ClassLoader -> Extensino ClassLoader -> Application ClassLoader -> User ClassLoader
+* 双亲委派模型。Bootstrap ClassLoader -> Extension ClassLoader -> Application ClassLoader -> User ClassLoader
 
 #### 以下有且只有5种情况会初始化类（如果类没有被初始化，则需要先触发其初始化）
 1. 遇到new,getstatic,putstatic,invokestatic这四条指令的时候
