@@ -7,8 +7,8 @@
 * [map](java_base/map.md)
 
 ##### 线程安全
-* 线程池的使用和原理
-* 线程同步的策略
+* [线程池的使用和原理](java_base/thread_sync.md)
+* [线程同步的策略](java_base/threadpool.md)
 
 ##### GC,JVM虚拟机
 * [Java类加载过程](java_base/classLoader.md)
