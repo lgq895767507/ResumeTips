@@ -15,6 +15,11 @@
      * 序列化：writeToParcel()
      * 反序列化：createFromParcel()
 
+   * Parcelable和Serializable的区别：
+     * 1）在使用内存的时候，Parcelable比Serializable性能高，所以推荐使用Parcelable。
+     * 2）Serializable在序列化的时候会产生大量的临时变量，从而引起频繁的GC。
+     * 3）Parcelable不能使用在要将数据存储在磁盘上的情况，因为Parcelable不能很好的保证数据的持续性在外界有变化的情况下。尽管Serializable效率低点，但此时还是建议使用Serializable 。
+
 3. string stringbuild stringbuffer的区别？stringbuild的的数据结构是怎样的？
    * string: final类型
    * stringbuild:非线程安全
@@ -100,6 +105,11 @@
     * 通信使用明文，内容可能被窃听(重要密码泄露)
     * 不验证通信方身份，有可能遭遇伪装(跨站点请求伪造)
     * 无法证明报文的完整性，有可能已遭篡改(运营商劫持)
+  * http + ssl/tls = https 
+  * SSL/TLS协议的基本过程: 
+    * 1） 客户端向服务器端索要并验证公钥
+    * 2） 双方协商生成"对话密钥"
+    * 3） 双方采用"对话密钥"进行加密通信。
 
 21. IdleHandler
     * MessageQueue中一个回调接口

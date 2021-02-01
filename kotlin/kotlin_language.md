@@ -68,5 +68,10 @@ data class User(val name: String = "", val age: Int = 0)
 
 ```
 9. [单利模式](https://www.jianshu.com/p/5797b3d0ebd0)
+
+
+10. kotlin一些关键字的源码实现是怎样的？
+
+
     
     

@@ -53,6 +53,8 @@
 * UI优化
 * 内存优化
 * 电量优化
+* [oom](optimization/oom.md)
+* [anr](optimization/anr.md)
   
 ##### 架构设计与设计模式
 * mvc,mvp,mvvm
