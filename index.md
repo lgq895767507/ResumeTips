@@ -59,6 +59,7 @@
 ##### 架构设计与设计模式
 * mvc,mvp,mvvm
 * [常用的设计模式及使用场景](design/designModel.md)
+* [架构工程相关](arc/Architectur.md)
 
 ##### 音视频
 * ffmpeg
@@ -78,7 +79,7 @@
 * [Rxjava](source/rxjava.md)
 * EventBus
 * aroute
-* leckcanary
+* [leckcanary](source/leckcanary.md)
 
 
 #### kotlin

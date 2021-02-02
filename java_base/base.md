@@ -87,7 +87,6 @@
 18. 如何避免OOM
     * 减少内存对象的占用
     * ArrayMap/SparseArray代替hashmap
-    * 避免在android里面使用Enum
     * 减少bitmap的内存占用
     * StringBuilder 代替+
     * 避免重复创建局部变量
@@ -116,3 +115,6 @@
     * 当messageQueue消息执行结束后，线程空闲了，就会回调此监听
 
 22. 线上日志如何回捞？
+
+23. handler为什么不会卡死主线程?
+    * https://zhuanlan.zhihu.com/p/143353788
