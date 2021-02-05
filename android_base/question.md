@@ -9,3 +9,5 @@
 4. 内存优化如何分析定位的？
 
 5. app启动优化具体做了什么？多进程的情况下会执行几次application? 
+
+6. [sgva和lottie的对比](https://jfson.github.io/2018/01/08/41-anim/)

@@ -118,3 +118,7 @@
 
 23. handler为什么不会卡死主线程?
     * https://zhuanlan.zhihu.com/p/143353788
+
+24. 运行时异常和非运行时异常有什么区别？
+    * 非运行时异常是RuntimeException以外的异常，如IOException、SQLException等以及用户自定义的Exception异常。可查异常，指的是在编译期在一定程度能预料的异常，程序要么try,catch捕获，要么用throws子句声明抛出它，否则无法编译通过
+    * RuntimeException，不可查异常，这些异常一般是由程序逻辑错误引起的，程序应该从逻辑角度尽可能避免这类异常的发生。
