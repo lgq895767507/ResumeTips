@@ -13,7 +13,7 @@
 ##### GC,JVM虚拟机
 * [Java类加载过程](java_base/classLoader.md)
 
-#### Android基础
+#### [Android基础](android_base/base.md)
 * startActivity源码层分析
 * [异常分析](android_base/crash.md)
 * launcher启动流程
@@ -55,6 +55,9 @@
 * 电量优化
 * [oom](optimization/oom.md)
 * [anr](optimization/anr.md)
+* [包体积优化](optimization/apk.md)
+* [fps](optimization/fps.md)
+* [网络优化](optimization/network.md)
   
 ##### 架构设计与设计模式
 * mvc,mvp,mvvm
@@ -62,7 +65,7 @@
 * [架构工程相关](arc/Architectur.md)
 
 ##### 音视频
-* ffmpeg
+* [ffmpeg](video/ffmpeg.md)
 * opencv
 * ndk
 * h264
@@ -77,7 +80,7 @@
 * [Okhttp](source/okhttp.md)
 * [Glide](source/glide.md)
 * [Rxjava](source/rxjava.md)
-* EventBus
+* [EventBus](source/eventbus.md)
 * aroute
 * [leckcanary](source/leckcanary.md)
 

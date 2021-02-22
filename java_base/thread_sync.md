@@ -6,9 +6,13 @@
     * synchronized的语义底层是通过一个monitor的对象来完成，其实wait/notify等方法也依赖于monitor对象，这就是为什么只有在同步的块或者方法中才能调用wait/notify等方法，否则会抛出java.lang.IllegalMonitorStateException的异常的原因。
 
 
-  * ReentrantLock(重入锁)
+  * [ReentrantLock](https://zhuanlan.zhihu.com/p/249147493)
+    * 原理：CAS+AQS队列实现
+
+
 * 非阻塞同步
-  * CAS(compare-and-swap) --原子操作类：AtomicInteger
+  * CAS(compare-and-swap)算法 --原子操作类：AtomicInteger
+  * CAS缺点会存在ABA问题，可以通过加版本号来解决
 * 无同步方案
   * 线程本地存储(Thread Local Storage)
   * ThreadLocal类中，每个线程的Thread对象都有一个ThreadLocalMap对象，这个对象存储了一组以ThreadLocal.threadLocalHashCode为键，以本地线程变量为值的k-v值对，也即是每一个ThreadLocal对象都包含一个threadLocalHashCode值，通过这个就能找到本地线程变量。
@@ -38,5 +42,43 @@
 * 破坏”请求与保持条件“：第一种方法静态分配即每个进程在开始执行时就申请他所需要的全部资源。第二种是动态分配即每个进程在申请所需要的资源时他本身不占用系统资源。
 * 破坏“循环等待”条件：采用资源有序分配其基本思想是将系统中的所有资源顺序编号，将紧缺的，稀少的采用较大的编号，在申请资源时必须按照编号的顺序进行，一个进程只有获得较小编号的进程才能申请较大编号的进程。
 
+
 #### wait和sleep的区别
 * 
+
+#### 进程和线程的区别
+
+> 区别：
+进程： 是系统进行资源分配的独立单元
+  * 操作系统为每个进程分配了独立的地址空间  
+线程： cpu调度的基本单元
+  * 在一个进程内也需要并行执行多个程序，实现不同的功能。
+
+* 定义方面：进程是程序在某个数据集合上的一次运行活动；线程是进程中的一个执行路径。（进程可以创建多个线程）
+* 角色方面：在支持线程机制的系统中，进程是系统资源分配的单位，线程是CPU调度的单位。
+* 资源共享方面：进程之间不能共享资源，而线程共享所在进程的地址空间和其它资源。同时线程还有自己的栈和栈指针，程序计数器等寄存器。
+* 独立性方面：进程有自己独立的地址空间，而线程没有，线程必须依赖于进程而存在。
+* 开销方面。进程切换的开销较大。线程相对较小。（前面也提到过，引入线程也出于了开销的考虑。）
+
+
+##### 两个进程之间数据共享一个变量有什么方式？
+* mmkv支持多进程通信，基于mmap内存映射的key-value数据结构，底层序列化/反序列化使用 protobuf 实现，性能高，稳定性强
+
+
+#### android进程之间的通信方式有哪些？
+* 使用Bundle
+* 使用文件共享
+* 使用Messenger
+* 使用AIDL
+* 使用ContentProvider
+* 使用Socket
+
+#### T1、T2、T3三个线程，如何保证它们顺序执行？也就是异步转同步的方式。
+1. Thread#join
+2. CountDownLatch： 使一个线程等待其他线程各自执行完毕后再执行。是通过一个计数器来实现的，计数器的初始值是线程的数量。每当一个线程执行完毕后，计数器的值就-1，当计数器的值为0时，表示所有线程都执行完毕，然后在闭锁上等待的线程就可以恢复工作了。
+3. Executors#newSingleThreadExecutor
+4. wait/notify
+
+#### sleep和wait的区别？
+1. 来自不同的类分别是Thread和Object
+2. sleep方法没有释放锁，而wait方法释放了锁
