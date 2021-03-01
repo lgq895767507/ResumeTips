@@ -23,3 +23,7 @@ defaultConfig {
 9. 只提供对主流架构的支持，比如arm，对于mips和x86架构可以考虑不提供支持，系统会自动提供相应的兼容。只在armeabi下面放置了一套so库文件
 10. 三方库处理，尽量少的使用第三方库，必须要使用的时候，库体积需作为参考条件之一。
 11. 组件化
+
+
+## [apk打包流程](https://www.jianshu.com/p/d29c37dda256)
+![avatar](../img/apk_package.webp)
