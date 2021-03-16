@@ -1,10 +1,16 @@
- #### android性能优化
+ ## android性能优化
+
+ #### 性能优化会关注哪些指标?
+ * 流畅
+ * 稳定
+ * 资源节省
  
  * app启动优化：黑白屏解决方案--修改自定义继承apptheme,设置背景为启动页的背景，可以设置为layout-list
    * 代码优化：如何检测启动时间的耗时呢？
      1. Debug.startMethodTracing("filePath") //application onCreate()启动的时候调用，结束的时候调用stopMethodTracing()
-     2. 异步线程优化方案
+     2. 异步线程优化方案, [优秀文章:有向无环图](https://mp.weixin.qq.com/s/LU5G5GT4rTtr2Rsnx4SOQQ)
      3. 懒加载优化方案
+     4. [参考alibaba异步task方案alpha](https://github.com/alibaba/alpha)
   * ui优化
      * 目的：要小于16ms/帧刷新率，显示才不会卡顿。
         * 减少cpu解析xml的时间

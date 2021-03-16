@@ -43,3 +43,19 @@ RealCall的enqueue()方法中，首先会检查是否被executed，如果没有�
 * ConnectInterceptor 连接拦截器：建立 http 连接。
 * interceptors.addAll(networkIntclient.networkInterceptors())  // --- !forWebSocket
 * CallServerInterceptor 
+
+#### Application interceptors
+* Don't need to worry about intermediate responses like redirects and retries.
+* Are always invoked once, even if the HTTP response is served from the cache.
+* Observe the application's original intent. Unconcerned with OkHttp-injected headers like If-None-Match.
+* Permitted to short-circuit and not call Chain.proceed().
+* Permitted to retry and make multiple calls to Chain.proceed().
+  
+#### Network Interceptors
+* Able to operate on intermediate responses like redirects and retries.
+* Not invoked for cached responses that short-circuit the network.
+* Observe the data just as it will be transmitted over the network.
+* Access to the Connection that carries the request.
+
+> 简单的说，Application interceptors是自定义的拦截器，会在重定向拦截器之前，而且是原始的originRequest，至少会被调用一次，因此可以动态添加一些参数。
+> Network Interceptors是在CacheInterceptor之后的，请求的参数是经过处理后，因此可以作为拦截网络日志HttpLoggingInterceptor。

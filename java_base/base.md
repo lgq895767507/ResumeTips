@@ -135,3 +135,35 @@
     * SharedPreference 相关修改使用 apply 方法进行提交会先写入内存，然后异步写入磁盘，commit方法是直接写入磁盘。如果频繁操作的话 apply 的性能会优于 commit，apply会将最后修改内容写入磁盘。
     * apply为了避免频繁写入磁盘，会延迟一段时间(100ms)再执行写入。
 
+26. instanceof方法是如何判断是同一个类型的？
+
+```java
+// instanceof的实现原理
+
+boolean rs;
+if (obj == null) {
+  rs= false;
+} else {
+  try {
+      T temp = (T) obj; 
+      rs= true;
+  } catch (ClassCastException e) {
+      rs = false;
+  }
+}
+return rs;
+
+
+```
+27. ArrayList<String> a, ArrayList<Number> b, a.getClass == b.getClass是否相等？
+    * 返回true
+
+28. 为什么HashMap中key是引用类型而不是基本数据类型？
+    * 最主要的原因是，hashmap中不能存储重复值，因此在存入值的时候，需要用到存储对象的hashcode()和equals()方法进行判断，而基本数据类型是没有这两个方法的。因此HashMap中key只能是引用类型。
+    * 包装类的作用：
+    1. 包装类里面有一些很有用的方法和属性，如HashCode,ParseInt，equals；比如hashmap中就用到了
+    2. 基本类型不能赋null值，某些场合需要；
+    3. 很多地方不能直接用基本类型，比如集合，范型；
+    4. 包装类的缓存提高了存取效率。
+
+
