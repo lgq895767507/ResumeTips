@@ -41,8 +41,8 @@
 
 7. mvc,mvp,mvvm的区别？
    * model, view, control. 相互关联，耦合
-   * model, view, present. model和view通过present解耦，不直接关联.
-   * model. view, viewmodel. viewmodel也就是视图的模型.
+   * model, view, present. model和view通过present解耦，不直接关联，present会和view相互关联持有,是双向的.
+   * model. view, viewmodel. viewmodel也就是视图的模型,view持有viewModel，但是viewModel不会持有view，是单向的.
 
 8. 属性动画和帧动画的区别
    *  帧动画：像电影片段一样，由一张一张的图片组成的一组动画效果，效果比较多样化，实现种类多，缺点是资源消耗过大，繁琐
@@ -53,7 +53,7 @@
     * 补间动画：只产生了一个动画效果，其真实的坐标并没有发生改变（只是改变了View的显示效果而已，并不会真正的改变View的属性）。View做在做动画的时候，它并没有真正的移动它的位置，而是根据动画时间的插值，计算出一个Matrix，然后不停的invalidate，在onDraw中的Canvas上使用这个计算出来的Matrix去draw这个View的内容，并有onLayout中还是原来的位置，所以点击事件只能点击到原来的位置才能触发
 
 10. ‌页面滑动卡顿了，你有什么方式或者工具来处理？
-    1. fps检测，fps直接反映当前页面是否流程的指标，如果卡顿则上传当前activity栈信息
+    1. fps检测，fps直接反映当前页面是否流程的指标，如果卡顿则上传当前activity栈信息, looper在处理message前后计算是否超出的阈值
     2. DDMS,adnroid profiler本地debug该页面，分析问题(1. 是否主线程耗时操作 2. 绘制层级过深)
     
 11. ‌代码混淆后，你是如何分析crash代码的？

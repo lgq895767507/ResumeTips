@@ -10,7 +10,9 @@
    * databinding
 
 2. app如何防抓包
+   * https：https://www.cnblogs.com/chenxibobo/p/14097933.html
    * 加固：
+   * apk签名：https://www.jianshu.com/p/308515c94dc6
 
 3. 国际化适配对于中东地区的如何适配？
 

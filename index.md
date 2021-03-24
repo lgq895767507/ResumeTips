@@ -40,12 +40,11 @@
 * [属性动画](ui/objectAnimator.md)
 
 ##### 组件化
-* Android组件化路由架构设计
+* [Android组件化路由架构设计](source/aroute.md)
 
 ##### 插件化
-* Android插件化框架设计
-* 类加载机制
-* 动态代理
+* [Android插件化框架设计](/hotfix/virtualApp.md)
+* [类加载机制](/java_base/classLoader.md)
 * [热更新](hotfix/tinker.md)
   
 ##### [性能优化](optimization/app_optimization.md)
@@ -81,7 +80,7 @@
 * [Glide](source/glide.md)
 * [Rxjava](source/rxjava.md)
 * [EventBus](source/eventbus.md)
-* aroute
+* [aroute](source/aroute.md)
 * [leckcanary](source/leckcanary.md)
 
 

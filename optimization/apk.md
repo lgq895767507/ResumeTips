@@ -27,3 +27,7 @@ defaultConfig {
 
 ## [apk打包流程](https://www.jianshu.com/p/d29c37dda256)
 ![avatar](../img/apk_package.webp)
+
+
+## [apk安装流程](http://www.androidchina.net/6667.html)
+
