@@ -15,7 +15,7 @@
 
 ##### ConcurrentHashMap
 
-* 1.7版本：Segment[] + HashEntry(数组+链表)
+* 1.7版本：Segment[] + HashEntry(数组+链表): https://mp.weixin.qq.com/s/1yWSfdz0j-PprGkDgOomhQ
 * HashEntry的value和链表next都被volatile修饰
 * 分段锁技术(Segment继承ReentrantLock)
 * 1.8版本：CAS + synchronized

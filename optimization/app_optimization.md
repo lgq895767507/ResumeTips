@@ -39,6 +39,7 @@
          * 标记整理
          * 分代收集
       * 垃圾收集器
+         * [Edem : from : to = 8 :1 : 1 新生代三个区的比例](https://bbs.huaweicloud.com/blogs/126777) 
          * Serial收集器：单线程操作，暂停其他任务(STW "Stop the world"):新生代用的复制算法，老年代用的标记整理算法
          * ParNew收集器：多线程版本的Serial，仍然也会STW
          * Parallel Scavenge收集器：通过控制吞吐量来控制停顿的时间，也被成为吞吐量优先收集器
