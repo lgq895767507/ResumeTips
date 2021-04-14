@@ -7,4 +7,5 @@
    * 比leakCanary更好的检测性能，fork子进程进行dump分析
    * leakCanary泄漏检测触发机制会主动GC,能会造成用户可感知的卡顿,而KOOM采用内存阈值监控来触发镜像采集。
    * [copy-on-write](https://zhuanlan.zhihu.com/p/136428913) 是计算机领域相当经典的优化思想，当然你如果问一个Java 开发者 copy-on-write 有什么作用？他们往往第一反应就是：优雅地解决读多写少场景下的并发问题。
+
 2. koom的原理是什么？难点在哪里？

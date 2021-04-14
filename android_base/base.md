@@ -15,10 +15,15 @@
    * apk签名：https://www.jianshu.com/p/308515c94dc6
 
 3. 国际化适配对于中东地区的如何适配？
+   * supportRtl
 
 4. 内存优化如何分析定位的？
+   * Memory Profiler
+   * MAT
 
 5. app启动优化具体做了什么？多进程的情况下会执行几次application? 
+   * 异步线程
+   * 同步任务
 
 6. [sgva和lottie的对比](https://jfson.github.io/2018/01/08/41-anim/)
 
@@ -58,7 +63,16 @@
     * 因为Intent启动会跨进程，和AMS的进程通信，所携带的数据要能够在不同进程间传输，不同进程之间的java对象是无法传输，所以我们此处要对对象进行序列化。
     
 12. http上传图片的流程？
-    * 
+    * 读取图片并压缩后转为InputStream
+    * 包装图片文件并上传
+    * 获取返回码并做相应处理
 13. application的onCreate什么时候执行的？除了刚启动的时候，还会有可能被执行吗？多进程如何设置？
+    * mInitialApplication.onCreate(); // activityThread 7117
 14. [recycleView性能优化](https://www.cnblogs.com/zgz345/p/13436005.html)
+    * bindViewHolder不能做耗时操作
+    * DiffUtil数据优化
+    * 布局优化,减少层级，固定高度
+    * 加大RecyclerView缓存
+    * 优化滑动操作
+    * ...
 

@@ -9,8 +9,8 @@
   * 合并操作符
     * startwith
     * contractwith
-    * zip
-    * merge
+    * zip: 按顺序结合两个或多个Observables发射的数据项
+    * merge: 可能会不是按着顺序合并发送
   * 异常操作符
     * onErrorReturn
     * onErrorResumeNext
