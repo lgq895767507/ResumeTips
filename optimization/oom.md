@@ -2,6 +2,9 @@
 
 * 可行措施：参照快手KOOM, 抖音Liko
 
+#### [oom可能出现的场景](https://zhuanlan.zhihu.com/p/79355050)
+
+
 
 #### 分析案例：
 

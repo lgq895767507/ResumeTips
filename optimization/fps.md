@@ -36,3 +36,6 @@ public static void loop() {
 
 ```
 
+3. systrace+函数插桩
+4. 自定义Printer
+
