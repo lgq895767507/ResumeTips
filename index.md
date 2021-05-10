@@ -7,8 +7,8 @@
 * [map](java_base/map.md)
 
 ##### 线程安全
-* [线程池的使用和原理](java_base/thread_sync.md)
-* [线程同步的策略](java_base/threadpool.md)
+* [线程池的使用和原理](java_base/threadpool.md)
+* [线程同步的策略](/java_base/thread_sync.md)
 
 ##### GC,JVM虚拟机
 * [Java类加载过程](java_base/classLoader.md)
@@ -44,7 +44,6 @@
 
 ##### 插件化
 * [Android插件化框架设计](/hotfix/virtualApp.md)
-* [类加载机制](/java_base/classLoader.md)
 * [热更新](hotfix/tinker.md)
   
 ##### [性能优化](optimization/app_optimization.md)
@@ -91,3 +90,5 @@
 #### flutter
 * 
 
+#### 计算机网络
+* [http/https](/java_base/https.md)
